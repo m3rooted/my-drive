@@ -1,5 +1,5 @@
 {
-  "name": "gdrive-clone-backend",
+  "name": "mydrive-clone-backend",
   "version": "1.0.0",
   "description": "Google Drive clone backend API",
   "main": "server.js",

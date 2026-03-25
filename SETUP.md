@@ -4,8 +4,8 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/
-cd google-drive-clone
+git clone https://github.com/m3rooted/my-drive
+cd my-drive
 ```
 
 ### 2. Backend Setup
