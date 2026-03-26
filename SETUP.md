@@ -28,6 +28,25 @@ npm start
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5001
 
+### 5. One-Command Start (Windows + ngrok)
+From the repository root, run:
+
+```powershell
+.\start-all.ps1
+```
+
+Optional: change frontend tunnel port (default is 3000):
+
+```powershell
+.\start-all.ps1 -FrontendPort 3000
+```
+
+Optional: set ngrok token while starting:
+
+```powershell
+.\start-all.ps1 -NgrokAuthToken "YOUR_NGROK_AUTHTOKEN"
+```
+
 ## Environment Variables
 
 Create a `.env` file in the backend directory with:
