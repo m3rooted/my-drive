@@ -9,9 +9,10 @@ class User {
 
   async create(userData) {
     const { email, password, name } = userData;
+    const normalizedEmail = email.toLowerCase();
     
     // Check if user already exists
-    const existingUser = this.users.find(user => user.email === email);
+    const existingUser = this.users.find(user => user.email === normalizedEmail);
     if (existingUser) {
       throw new Error('User already exists');
     }
@@ -21,7 +22,7 @@ class User {
     
     const user = {
       id: uuidv4(),
-      email,
+      email: normalizedEmail,
       password: hashedPassword,
       name,
       createdAt: new Date(),
@@ -36,7 +37,8 @@ class User {
   }
 
   async findByEmail(email) {
-    return this.users.find(user => user.email === email);
+    const normalizedEmail = email.toLowerCase();
+    return this.users.find(user => user.email === normalizedEmail);
   }
 
   async findById(id) {
