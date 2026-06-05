@@ -77,7 +77,12 @@ NODE_ENV=development
 ### Frontend (Netlify/Vercel)
 1. Build the project: `npm run build`
 2. Deploy the `build` folder
-3. Set `REACT_APP_API_URL` environment variable
+3. Set `REACT_APP_API_URL` to your deployed backend API URL, for example:
+   ```env
+   REACT_APP_API_URL=https://your-backend-domain.com/api
+   ```
+
+If your deployed frontend has been migrated to Vite, set `VITE_API_URL` to the same value instead.
 
 ## Contributing
 
